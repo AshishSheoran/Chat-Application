@@ -6,9 +6,9 @@ const App = () => {
   return (
     <ChatEngine 
       height="100vh"
-      projectID=""
-      userName=""
-      userSecret=""
+      projectID="ace849b7-f144-4909-9008-ae03ba0fa906"
+      userName="Admin"
+      userSecret="123123"
 
     />
   )
