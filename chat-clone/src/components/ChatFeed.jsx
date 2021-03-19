@@ -5,7 +5,7 @@ import TheirMessage from './TheirMessage';
 import MessageForm from './MessageForm';
 
 const ChatFeed = (props) => {
-    const { chats, activeChat, userName, message } = props;
+    const { chats, activeChat, userName, messages } = props;
 
     // If chats exist, then assign them to chat.
     const chat = chats && chats[activeChat];
@@ -28,7 +28,7 @@ const ChatFeed = (props) => {
                             : <TheirMessage message={message} lastMessageKey={messages[lastMessageKey]} />
                         }
                     </div>
-                    <div className="read-receipts" style={{ marginRight: myMessage ? '18px' : '0px', marginLeft: isMyMessage ? '0px' : '68px'}}>
+                    <div className="read-receipts" style={{ marginRight: MyMessage ? '18px' : '0px', marginLeft: isMyMessage ? '0px' : '68px'}}>
                         read-receipts
                     </div>
                 </div>
@@ -41,12 +41,13 @@ const ChatFeed = (props) => {
     return (
         <div className="chat-feed">
             <div className="chat-title-container">
-                <div className="chat-title">{chat?.title}</div>     // "chat?" will make sure we have a chat before assigning title
+                {/* "chat?" will make sure we have a chat before assigning title */}
+                <div className="chat-title">{chat?.title}</div>      
                 <div className="chat-subtitle">
                     {chat.people.map((person) => ` ${person.person.userName}`)}
                 </div>
             </div>
-            {renderMessage()}
+            {renderMessages()}
             <div style={{height: '100px'}} />
             <div className="message-form-container">
                 <MessageForm {...props} chatId={activeChat} />
