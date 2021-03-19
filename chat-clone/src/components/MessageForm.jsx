@@ -1,3 +1,5 @@
+// From used for sending messges
+
 const MessageForm = () => {
     return (
         <div>

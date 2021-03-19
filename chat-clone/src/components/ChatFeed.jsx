@@ -1,4 +1,8 @@
-import { render } from "react-dom";
+// Used for the Chat Feed
+
+import MyMessage from './MyMessage';
+import TheirMessage from './TheirMessage';
+import MessageForm from './MessageForm';
 
 const chatFeed = (props) => {
     
