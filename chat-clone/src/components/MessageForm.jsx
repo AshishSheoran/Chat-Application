@@ -12,6 +12,8 @@ const MessageForm = (props) => {
         const text = value.trim();
         // sendMessage is a react method, which needs these three parameters to work.
         if(text.length > 0) sendMessage(creds, chatId, { text });
+
+        setValue('');
     }
 
     const handleChange = (event) => {

@@ -3,6 +3,8 @@ const TheirMessage = ({ lastMessage, message }) => {
   const isFirstMessageByUser =
     !lastMessage || lastMessage.sender.userName !== message.sender.userName;
 
+    console.log(message.sender.userName);
+
   return (
     <div className="message-row">
       {/* If the first message is by the user and then return avatar as message image. */}
@@ -26,8 +28,8 @@ const TheirMessage = ({ lastMessage, message }) => {
         <div
           className="message"
           style={{
-            float: "left",
-            backgroundColor: "#CABCDC",
+            float: 'left',
+            backgroundColor: '#CABCDC',
             marginLeft: isFirstMessageByUser ? '4px' : '48px'
           }}
         >
